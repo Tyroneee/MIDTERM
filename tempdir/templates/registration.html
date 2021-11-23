@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration - Guevarra </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loginstyle.css')}}">
+</head>
+<body>
+    <form method="POST">
+    <div class="con">
+        <header class = "head-form">
+            <h1>REGISTER</h1>
+        </header>
+
+
+    <div class = "field-set">
+        <span class="input-item">
+            <i class="fa fa-user-circle"></i>
+        </span>
+        <input type="text" placeholder="Enter First Name" name="firstname" id ="firstname" required>
+        <br>
+        <span class="input-item">
+            <i class="fa fa-user-circle"></i>
+        </span>
+        <input type="text" placeholder="Enter Last Name" name="lastname" id ="lastname" required>
+        <br>
+        <span class="input-item">
+            <i class="fa fa-user-circle"></i>
+        </span>
+        <input type="text" placeholder="Enter Username" name="username" id ="username" required>
+        <br>
+        <span class="input-item">
+            <i class="fa fa-user-key"></i>
+        </span>
+        <input type="password" placeholder="Enter Password" name="password" id ="pass" required>
+        <br>
+        <span>
+            <i class="fa fa-key" aria-hidden="true" type="button" id="eye"></i>
+        </span>
+        <br>
+        <a><button class="log-in">Register</button></a>
+        <br>
+    </div>
+</form>
+
+    <form action='/' method="POST">
+        <div class = "con">
+            <p>Have an account? <a href="{{ url_for('login') }}">Log in.</a></p>
+        </div>
+    </form>
+
+</body>
+</html>
