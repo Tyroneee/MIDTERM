@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login - Guevarra </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loginstyle.css')}}">
+</head>
+<body>
+    <div class="overlay">
+        <form method = "POST">
+            <div class = "con">
+                <header class = "head-form">
+                    <h1>LOG IN</h1>
+                </header>
+        
+
+            <div class = "field-set">
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                </span>
+                <input class="form-input" id="username" name="username" type="text" placeholder="@UserName" required>
+                <br>
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <input class="form-input" id="password" name="password" type="password" placeholder="Password" required>
+                <span>
+                    <i class="fa fa-key" aria-hidden="true" type="button" id="eye"></i>
+                </span>
+                <br>
+                <a><button class="log-in">Log In</button></a>
+            </div>
+        </form>
+
+        <form action="/registration" method="POST">
+            <div class="other">
+                <a href="{{ url_for('login') }}"><button class="btn submits sign-up">Sign Up
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </button>
+                </a>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
